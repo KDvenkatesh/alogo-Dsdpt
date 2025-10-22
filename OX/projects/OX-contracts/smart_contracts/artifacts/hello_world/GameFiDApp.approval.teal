@@ -1,0 +1,716 @@
+#pragma version 11
+#pragma typetrack false
+
+// algopy.arc4.ARC4Contract.approval_program() -> uint64:
+main:
+    intcblock 0 32 8 1
+    bytecblock "treasury_algo" "player_algo" "admin" "player_mint" "player_spot" 0x414c474f "game_fee" 0x4d494e54 0x53504f54
+    // smart_contracts/hello_world/contract.py:3-4
+    // # --- ARC4 Contract Definition ---
+    // class GameFiDApp(ARC4Contract):
+    txn NumAppArgs
+    bz main___algopy_default_create@19
+    txn OnCompletion
+    !
+    assert // OnCompletion must be NoOp
+    txn ApplicationID
+    assert
+    pushbytess 0xcc694eaa 0xa863c9a4 0x1d68ec4c 0x59594296 0x1f62daaf 0x076147b5 0x6c46f2d4 0x978edd86 0xade430d6 0xde145ea6 // method "create(address)void", method "deposit_algo(address,uint64)void", method "withdraw_algo(address,uint64)void", method "enter_game(address,uint64,byte[],uint64)void", method "resolve_game(address,uint64,address,byte[])void", method "swap_tokens(address,byte[],byte[],uint64,uint64)void", method "release_escrow(address,uint64)void", method "update_oracle(address,byte[],uint64)void", method "update_game_result(address,uint64,byte[])void", method "validate_security()void"
+    txna ApplicationArgs 0
+    match create deposit_algo withdraw_algo enter_game resolve_game swap_tokens release_escrow update_oracle update_game_result validate_security
+    err
+
+main___algopy_default_create@19:
+    txn OnCompletion
+    !
+    txn ApplicationID
+    !
+    &&
+    return // on error: OnCompletion must be NoOp && can only call when creating
+
+
+// smart_contracts.hello_world.contract.GameFiDApp.create[routing]() -> void:
+create:
+    // smart_contracts/hello_world/contract.py:34-35
+    // # --- Events ---
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    // smart_contracts/hello_world/contract.py:38
+    // self.admin.value = sender
+    bytec_2 // "admin"
+    swap
+    app_global_put
+    // smart_contracts/hello_world/contract.py:39-40
+    // # initialize numeric globals to safe defaults
+    // self.treasury_algo.value = UInt64(0)
+    bytec_0 // "treasury_algo"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/hello_world/contract.py:41
+    // self.treasury_mint.value = UInt64(0)
+    pushbytes "treasury_mint"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/hello_world/contract.py:42
+    // self.treasury_spot.value = UInt64(0)
+    pushbytes "treasury_spot"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/hello_world/contract.py:43
+    // self.game_fee.value = UInt64(0)
+    bytec 6 // "game_fee"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/hello_world/contract.py:44
+    // self.mint_token_id.value = UInt64(0)
+    pushbytes "mint_token_id"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/hello_world/contract.py:45
+    // self.spot_token_id.value = UInt64(0)
+    pushbytes "spot_token_id"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/hello_world/contract.py:46
+    // self.nft_template_id.value = UInt64(0)
+    pushbytes "nft_template_id"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/hello_world/contract.py:34-35
+    // # --- Events ---
+    // @arc4.abimethod
+    intc_3 // 1
+    return
+
+
+// smart_contracts.hello_world.contract.GameFiDApp.deposit_algo[routing]() -> void:
+deposit_algo:
+    // smart_contracts/hello_world/contract.py:49-50
+    // # --- Deposit/Withdraw ---
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    // smart_contracts/hello_world/contract.py:53
+    // self.player_algo[sender] = self.player_algo[sender] + amount
+    dig 1
+    intc_0 // 0
+    bytec_1 // "player_algo"
+    app_local_get_ex
+    assert // check self.player_algo exists for account
+    dig 1
+    +
+    uncover 2
+    bytec_1 // "player_algo"
+    uncover 2
+    app_local_put
+    // smart_contracts/hello_world/contract.py:54
+    // self.treasury_algo.value = self.treasury_algo.value + amount
+    intc_0 // 0
+    bytec_0 // "treasury_algo"
+    app_global_get_ex
+    assert // check self.treasury_algo exists
+    +
+    bytec_0 // "treasury_algo"
+    swap
+    app_global_put
+    // smart_contracts/hello_world/contract.py:49-50
+    // # --- Deposit/Withdraw ---
+    // @arc4.abimethod
+    intc_3 // 1
+    return
+
+
+// smart_contracts.hello_world.contract.GameFiDApp.withdraw_algo[routing]() -> void:
+withdraw_algo:
+    // smart_contracts/hello_world/contract.py:56
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    // smart_contracts/hello_world/contract.py:59
+    // assert self.player_algo[sender] >= amount, "Insufficient balance"
+    dig 1
+    intc_0 // 0
+    bytec_1 // "player_algo"
+    app_local_get_ex
+    assert // check self.player_algo exists for account
+    dup
+    dig 2
+    >=
+    assert // Insufficient balance
+    // smart_contracts/hello_world/contract.py:60
+    // self.player_algo[sender] = self.player_algo[sender] - amount
+    dig 1
+    -
+    uncover 2
+    bytec_1 // "player_algo"
+    uncover 2
+    app_local_put
+    // smart_contracts/hello_world/contract.py:61
+    // self.treasury_algo.value = self.treasury_algo.value - amount
+    intc_0 // 0
+    bytec_0 // "treasury_algo"
+    app_global_get_ex
+    assert // check self.treasury_algo exists
+    swap
+    -
+    bytec_0 // "treasury_algo"
+    swap
+    app_global_put
+    // smart_contracts/hello_world/contract.py:56
+    // @arc4.abimethod
+    intc_3 // 1
+    return
+
+
+// smart_contracts.hello_world.contract.GameFiDApp.enter_game[routing]() -> void:
+enter_game:
+    // smart_contracts/hello_world/contract.py:63-64
+    // # --- Game Entry & Escrow ---
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    txna ApplicationArgs 2
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    txna ApplicationArgs 3
+    dup
+    intc_0 // 0
+    extract_uint16
+    pushint 2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for (len+uint8[])
+    extract 2 0
+    txna ApplicationArgs 4
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    // smart_contracts/hello_world/contract.py:67-68
+    // # Example: Only ALGO supported for demo
+    // assert fee_asset == Bytes(b"ALGO"), "Only ALGO supported in demo"
+    swap
+    bytec 5 // 0x414c474f
+    ==
+    assert // Only ALGO supported in demo
+    // smart_contracts/hello_world/contract.py:69
+    // assert self.player_algo[sender] >= fee_amount, "Insufficient ALGO balance"
+    dig 1
+    intc_0 // 0
+    bytec_1 // "player_algo"
+    app_local_get_ex
+    assert // check self.player_algo exists for account
+    dup
+    dig 2
+    >=
+    assert // Insufficient ALGO balance
+    // smart_contracts/hello_world/contract.py:70
+    // self.player_algo[sender] = self.player_algo[sender] - fee_amount
+    dig 1
+    -
+    uncover 2
+    bytec_1 // "player_algo"
+    uncover 2
+    app_local_put
+    // smart_contracts/hello_world/contract.py:71
+    // self.treasury_algo.value = self.treasury_algo.value + fee_amount
+    intc_0 // 0
+    bytec_0 // "treasury_algo"
+    app_global_get_ex
+    assert // check self.treasury_algo exists
+    +
+    bytec_0 // "treasury_algo"
+    swap
+    app_global_put
+    // smart_contracts/hello_world/contract.py:63-64
+    // # --- Game Entry & Escrow ---
+    // @arc4.abimethod
+    intc_3 // 1
+    return
+
+
+// smart_contracts.hello_world.contract.GameFiDApp.resolve_game[routing]() -> void:
+resolve_game:
+    // smart_contracts/hello_world/contract.py:73-74
+    // # --- Game Logic & Rewards ---
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    len
+    intc_1 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    txna ApplicationArgs 2
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_1 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    txna ApplicationArgs 4
+    dup
+    intc_0 // 0
+    extract_uint16
+    pushint 2 // 2
+    +
+    swap
+    len
+    ==
+    assert // invalid number of bytes for (len+uint8[])
+    // smart_contracts/hello_world/contract.py:77-78
+    // # Example: 90% to winner, 10% to treasury
+    // fee = self.game_fee.value
+    intc_0 // 0
+    bytec 6 // "game_fee"
+    app_global_get_ex
+    assert // check self.game_fee exists
+    // smart_contracts/hello_world/contract.py:79
+    // winner_payout = fee * UInt64(9) // UInt64(10)
+    dup
+    pushint 9 // 9
+    *
+    pushint 10 // 10
+    /
+    // smart_contracts/hello_world/contract.py:80
+    // treasury_cut = fee - winner_payout
+    swap
+    dig 1
+    -
+    // smart_contracts/hello_world/contract.py:81
+    // self.player_algo[winner] = self.player_algo[winner] + winner_payout
+    dig 2
+    intc_0 // 0
+    bytec_1 // "player_algo"
+    app_local_get_ex
+    assert // check self.player_algo exists for account
+    uncover 2
+    +
+    uncover 2
+    bytec_1 // "player_algo"
+    uncover 2
+    app_local_put
+    // smart_contracts/hello_world/contract.py:82
+    // self.treasury_algo.value = self.treasury_algo.value + treasury_cut
+    intc_0 // 0
+    bytec_0 // "treasury_algo"
+    app_global_get_ex
+    assert // check self.treasury_algo exists
+    +
+    bytec_0 // "treasury_algo"
+    swap
+    app_global_put
+    // smart_contracts/hello_world/contract.py:73-74
+    // # --- Game Logic & Rewards ---
+    // @arc4.abimethod
+    intc_3 // 1
+    return
+
+
+// smart_contracts.hello_world.contract.GameFiDApp.swap_tokens[routing]() -> void:
+swap_tokens:
+    // smart_contracts/hello_world/contract.py:185-192
+    // # --- Tinyman Swap Integration (Simulated) ---
+    // # ...existing code...
+    // # ...existing code...
+    // # ...existing code...
+    //     # ...existing code...
+    // # ...existing code...
+    //     # ...existing code...
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    txna ApplicationArgs 2
+    dup
+    intc_0 // 0
+    extract_uint16
+    pushint 2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for (len+uint8[])
+    extract 2 0
+    dup
+    txna ApplicationArgs 3
+    dup
+    intc_0 // 0
+    extract_uint16
+    pushint 2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for (len+uint8[])
+    extract 2 0
+    swap
+    txna ApplicationArgs 4
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    dup
+    cover 2
+    txna ApplicationArgs 5
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    // smart_contracts/hello_world/contract.py:196
+    // assert out_amount >= min_out, "Slippage too high"
+    >=
+    assert // Slippage too high
+    // smart_contracts/hello_world/contract.py:197-198
+    // # Debit from_asset
+    // if from_asset == Bytes(b"ALGO"):
+    bytec 5 // 0x414c474f
+    ==
+    bz swap_tokens_after_if_else@3
+    // smart_contracts/hello_world/contract.py:199
+    // self.player_algo[sender] = self.player_algo[sender] - amount
+    dig 3
+    dup
+    intc_0 // 0
+    bytec_1 // "player_algo"
+    app_local_get_ex
+    assert // check self.player_algo exists for account
+    dig 2
+    -
+    bytec_1 // "player_algo"
+    swap
+    app_local_put
+
+swap_tokens_after_if_else@3:
+    // smart_contracts/hello_world/contract.py:200
+    // if from_asset == Bytes(b"MINT"):
+    dig 2
+    bytec 7 // 0x4d494e54
+    ==
+    bz swap_tokens_after_if_else@5
+    // smart_contracts/hello_world/contract.py:201
+    // self.player_mint[sender] = self.player_mint[sender] - amount
+    dig 3
+    dup
+    intc_0 // 0
+    bytec_3 // "player_mint"
+    app_local_get_ex
+    assert // check self.player_mint exists for account
+    dig 2
+    -
+    bytec_3 // "player_mint"
+    swap
+    app_local_put
+
+swap_tokens_after_if_else@5:
+    // smart_contracts/hello_world/contract.py:202
+    // if from_asset == Bytes(b"SPOT"):
+    dig 2
+    bytec 8 // 0x53504f54
+    ==
+    bz swap_tokens_after_if_else@7
+    // smart_contracts/hello_world/contract.py:203
+    // self.player_spot[sender] = self.player_spot[sender] - amount
+    dig 3
+    dup
+    intc_0 // 0
+    bytec 4 // "player_spot"
+    app_local_get_ex
+    assert // check self.player_spot exists for account
+    dig 2
+    -
+    bytec 4 // "player_spot"
+    swap
+    app_local_put
+
+swap_tokens_after_if_else@7:
+    // smart_contracts/hello_world/contract.py:204-205
+    // # Credit to_asset
+    // if to_asset == Bytes(b"ALGO"):
+    dig 1
+    bytec 5 // 0x414c474f
+    ==
+    bz swap_tokens_after_if_else@9
+    // smart_contracts/hello_world/contract.py:206
+    // self.player_algo[sender] = self.player_algo[sender] + out_amount
+    dig 3
+    dup
+    intc_0 // 0
+    bytec_1 // "player_algo"
+    app_local_get_ex
+    assert // check self.player_algo exists for account
+    dig 2
+    +
+    bytec_1 // "player_algo"
+    swap
+    app_local_put
+
+swap_tokens_after_if_else@9:
+    // smart_contracts/hello_world/contract.py:207
+    // if to_asset == Bytes(b"MINT"):
+    dig 1
+    bytec 7 // 0x4d494e54
+    ==
+    bz swap_tokens_after_if_else@11
+    // smart_contracts/hello_world/contract.py:208
+    // self.player_mint[sender] = self.player_mint[sender] + out_amount
+    dig 3
+    dup
+    intc_0 // 0
+    bytec_3 // "player_mint"
+    app_local_get_ex
+    assert // check self.player_mint exists for account
+    dig 2
+    +
+    bytec_3 // "player_mint"
+    swap
+    app_local_put
+
+swap_tokens_after_if_else@11:
+    // smart_contracts/hello_world/contract.py:209
+    // if to_asset == Bytes(b"SPOT"):
+    dig 1
+    bytec 8 // 0x53504f54
+    ==
+    bz swap_tokens_after_if_else@13
+    // smart_contracts/hello_world/contract.py:210
+    // self.player_spot[sender] = self.player_spot[sender] + out_amount
+    dig 3
+    dup
+    intc_0 // 0
+    bytec 4 // "player_spot"
+    app_local_get_ex
+    assert // check self.player_spot exists for account
+    dig 2
+    +
+    bytec 4 // "player_spot"
+    swap
+    app_local_put
+
+swap_tokens_after_if_else@13:
+    // smart_contracts/hello_world/contract.py:185-192
+    // # --- Tinyman Swap Integration (Simulated) ---
+    // # ...existing code...
+    // # ...existing code...
+    // # ...existing code...
+    //     # ...existing code...
+    // # ...existing code...
+    //     # ...existing code...
+    // @arc4.abimethod
+    intc_3 // 1
+    return
+
+
+// smart_contracts.hello_world.contract.GameFiDApp.release_escrow[routing]() -> void:
+release_escrow:
+    // smart_contracts/hello_world/contract.py:213-214
+    // # --- Treasury & Escrow Management ---
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    // smart_contracts/hello_world/contract.py:217
+    // assert self.admin.value == sender, "Not admin"
+    intc_0 // 0
+    bytec_2 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    uncover 2
+    ==
+    assert // Not admin
+    // smart_contracts/hello_world/contract.py:218-219
+    // # Reduce treasury by amount
+    // self.treasury_algo.value = self.treasury_algo.value - amount
+    intc_0 // 0
+    bytec_0 // "treasury_algo"
+    app_global_get_ex
+    assert // check self.treasury_algo exists
+    swap
+    -
+    bytec_0 // "treasury_algo"
+    swap
+    app_global_put
+    // smart_contracts/hello_world/contract.py:213-214
+    // # --- Treasury & Escrow Management ---
+    // @arc4.abimethod
+    intc_3 // 1
+    return
+
+
+// smart_contracts.hello_world.contract.GameFiDApp.update_oracle[routing]() -> void:
+update_oracle:
+    // smart_contracts/hello_world/contract.py:222-223
+    // # --- Oracle Integration ---
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    txna ApplicationArgs 2
+    dup
+    intc_0 // 0
+    extract_uint16
+    pushint 2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for (len+uint8[])
+    extract 2 0
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    // smart_contracts/hello_world/contract.py:226
+    // assert self.admin.value == sender, "Not admin"
+    intc_0 // 0
+    bytec_2 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    uncover 3
+    ==
+    assert // Not admin
+    // smart_contracts/hello_world/contract.py:227
+    // self.oracle_prices[symbol] = price
+    pushbytes 0x6f7261636c655f707269636573
+    uncover 2
+    concat
+    swap
+    itob
+    box_put
+    // smart_contracts/hello_world/contract.py:222-223
+    // # --- Oracle Integration ---
+    // @arc4.abimethod
+    intc_3 // 1
+    return
+
+
+// smart_contracts.hello_world.contract.GameFiDApp.update_game_result[routing]() -> void:
+update_game_result:
+    // smart_contracts/hello_world/contract.py:229
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    intc_0 // 0
+    extract_uint16
+    pushint 2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for (len+uint8[])
+    extract 2 0
+    // smart_contracts/hello_world/contract.py:232
+    // assert self.admin.value == sender, "Not admin"
+    intc_0 // 0
+    bytec_2 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    uncover 3
+    ==
+    assert // Not admin
+    // smart_contracts/hello_world/contract.py:233
+    // self.oracle_game_results[game_id] = result
+    swap
+    itob
+    pushbytes 0x6f7261636c655f726573756c7473
+    swap
+    concat
+    dup
+    box_del
+    pop
+    swap
+    box_put
+    // smart_contracts/hello_world/contract.py:229
+    // @arc4.abimethod
+    intc_3 // 1
+    return
+
+
+// smart_contracts.hello_world.contract.GameFiDApp.validate_security[routing]() -> void:
+validate_security:
+    // smart_contracts/hello_world/contract.py:239-240
+    // # Since we use UInt64, underflow would wrap; check treasury reasonable
+    // assert self.treasury_algo.value >= UInt64(0), "Negative treasury"
+    intc_0 // 0
+    bytec_0 // "treasury_algo"
+    app_global_get_ex
+    bury 1
+    // smart_contracts/hello_world/contract.py:235-236
+    // # --- Security Checks ---
+    // @arc4.abimethod
+    return // on error: check self.treasury_algo exists

@@ -1,0 +1,5720 @@
+{
+  "version": 3,
+  "sources": [
+    "../../hello_world/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAGA;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;AAAA;;;;;;;;;AA+BK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAGG;AAAA;AAAA;AAEA;AAA2B;AAA3B;AACA;;;;;;;;;;;;;;;AAA2B;AAA3B;AACA;;;;;;;;;;;;;;;AAA2B;AAA3B;AACA;;AAAsB;AAAtB;AACA;;;;;;;;;;;;;;;AAA2B;AAA3B;AACA;;;;;;;;;;;;;;;AAA2B;AAA3B;AACA;;;;;;;;;;;;;;;;;AAA6B;AAA7B;AAXH;AAAA;AAeA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAG8B;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA3B;;AAAA;AAAA;;AAAA;AAC2B;AAAA;AAAA;AAAA;AAAA;AAA3B;AAAA;AAAA;AAJH;AAAA;AAMA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAGU;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAP;AAC2B;;AAAA;AAA3B;;AAAA;AAAA;;AAAA;AAC2B;AAAA;AAAA;AAAA;AAAA;AAAA;AAA3B;AAAA;AAAA;AALH;AAAA;AAQA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAIU;AAAa;;AAAb;AAAP;AACO;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAP;AAC2B;;AAAA;AAA3B;;AAAA;AAAA;;AAAA;AAC2B;AAAA;AAAA;AAAA;AAAA;AAA3B;AAAA;AAAA;AAPH;AAAA;AAUA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAIS;AAAA;;AAAA;AAAA;AACU;AAAM;;AAAN;AAAmB;;AAAnB;AACD;AAAA;;AAAA;AACY;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA3B;;AAAA;AAAA;;AAAA;AAC2B;AAAA;AAAA;AAAA;AAAA;AAA3B;AAAA;AAAA;AARH;AAAA;AAsHA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAIU;AAAP;AAEiB;;AAAd;AAAX;;;AACuC;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA3B;AAAA;AAAA;AACD;;AAAc;;AAAd;AAAX;;;AACuC;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA3B;AAAA;AAAA;AACD;;AAAc;;AAAd;AAAX;;;AACuC;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAA3B;;AAAA;AAAA;AAED;;AAAY;;AAAZ;AAAX;;;AACuC;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA3B;AAAA;AAAA;AACD;;AAAY;;AAAZ;AAAX;;;AACuC;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA3B;AAAA;AAAA;AACD;;AAAY;;AAAZ;AAAX;;;AACuC;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAA3B;;AAAA;AAAA;AAlBP;AAAA;AAsBA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAGU;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAP;AAE2B;AAAA;AAAA;AAAA;AAAA;AAAA;AAA3B;AAAA;AAAA;AALH;AAAA;AASA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAGU;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAP;AACA;;;;;;;;;;;;;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAJH;AAAA;AAMA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAGU;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAP;AACyB;AAAA;AAAzB;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAJH;AAAA;AAWU;AAAA;AAAA;AAAA;;AAJV",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "algopy.arc4.ARC4Contract.approval_program",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 32 8 1"
+    },
+    "7": {
+      "op": "bytecblock \"treasury_algo\" \"player_algo\" \"admin\" \"player_mint\" \"player_spot\" 0x414c474f \"game_fee\" 0x4d494e54 0x53504f54"
+    },
+    "89": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "91": {
+      "op": "bz main___algopy_default_create@19",
+      "stack_out": []
+    },
+    "94": {
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "96": {
+      "op": "!",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "97": {
+      "error": "OnCompletion must be NoOp",
+      "op": "assert // OnCompletion must be NoOp",
+      "stack_out": []
+    },
+    "98": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "100": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "101": {
+      "op": "pushbytess 0xcc694eaa 0xa863c9a4 0x1d68ec4c 0x59594296 0x1f62daaf 0x076147b5 0x6c46f2d4 0x978edd86 0xade430d6 0xde145ea6 // method \"create(address)void\", method \"deposit_algo(address,uint64)void\", method \"withdraw_algo(address,uint64)void\", method \"enter_game(address,uint64,byte[],uint64)void\", method \"resolve_game(address,uint64,address,byte[])void\", method \"swap_tokens(address,byte[],byte[],uint64,uint64)void\", method \"release_escrow(address,uint64)void\", method \"update_oracle(address,byte[],uint64)void\", method \"update_game_result(address,uint64,byte[])void\", method \"validate_security()void\"",
+      "defined_out": [
+        "Method(create(address)void)",
+        "Method(deposit_algo(address,uint64)void)",
+        "Method(enter_game(address,uint64,byte[],uint64)void)",
+        "Method(release_escrow(address,uint64)void)",
+        "Method(resolve_game(address,uint64,address,byte[])void)",
+        "Method(swap_tokens(address,byte[],byte[],uint64,uint64)void)",
+        "Method(update_game_result(address,uint64,byte[])void)",
+        "Method(update_oracle(address,byte[],uint64)void)",
+        "Method(validate_security()void)",
+        "Method(withdraw_algo(address,uint64)void)"
+      ],
+      "stack_out": [
+        "Method(create(address)void)",
+        "Method(deposit_algo(address,uint64)void)",
+        "Method(withdraw_algo(address,uint64)void)",
+        "Method(enter_game(address,uint64,byte[],uint64)void)",
+        "Method(resolve_game(address,uint64,address,byte[])void)",
+        "Method(swap_tokens(address,byte[],byte[],uint64,uint64)void)",
+        "Method(release_escrow(address,uint64)void)",
+        "Method(update_oracle(address,byte[],uint64)void)",
+        "Method(update_game_result(address,uint64,byte[])void)",
+        "Method(validate_security()void)"
+      ]
+    },
+    "153": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(create(address)void)",
+        "Method(deposit_algo(address,uint64)void)",
+        "Method(enter_game(address,uint64,byte[],uint64)void)",
+        "Method(release_escrow(address,uint64)void)",
+        "Method(resolve_game(address,uint64,address,byte[])void)",
+        "Method(swap_tokens(address,byte[],byte[],uint64,uint64)void)",
+        "Method(update_game_result(address,uint64,byte[])void)",
+        "Method(update_oracle(address,byte[],uint64)void)",
+        "Method(validate_security()void)",
+        "Method(withdraw_algo(address,uint64)void)",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "Method(create(address)void)",
+        "Method(deposit_algo(address,uint64)void)",
+        "Method(withdraw_algo(address,uint64)void)",
+        "Method(enter_game(address,uint64,byte[],uint64)void)",
+        "Method(resolve_game(address,uint64,address,byte[])void)",
+        "Method(swap_tokens(address,byte[],byte[],uint64,uint64)void)",
+        "Method(release_escrow(address,uint64)void)",
+        "Method(update_oracle(address,byte[],uint64)void)",
+        "Method(update_game_result(address,uint64,byte[])void)",
+        "Method(validate_security()void)",
+        "tmp%6#0"
+      ]
+    },
+    "156": {
+      "op": "match create deposit_algo withdraw_algo enter_game resolve_game swap_tokens release_escrow update_oracle update_game_result validate_security",
+      "stack_out": []
+    },
+    "178": {
+      "op": "err"
+    },
+    "179": {
+      "block": "main___algopy_default_create@19",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "181": {
+      "op": "!",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "182": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "184": {
+      "op": "!",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%10#0"
+      ]
+    },
+    "185": {
+      "op": "&&",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "186": {
+      "error": "OnCompletion must be NoOp && can only call when creating",
+      "op": "return // on error: OnCompletion must be NoOp && can only call when creating",
+      "defined_out": [],
+      "stack_out": []
+    },
+    "187": {
+      "subroutine": "smart_contracts.hello_world.contract.GameFiDApp.create[routing]",
+      "params": {},
+      "block": "create",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "190": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "191": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0"
+      ]
+    },
+    "192": {
+      "op": "intc_1 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "193": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "eq%0#0"
+      ]
+    },
+    "194": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "195": {
+      "op": "bytec_2 // \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "\"admin\""
+      ]
+    },
+    "196": {
+      "op": "swap",
+      "stack_out": [
+        "\"admin\"",
+        "sender#0"
+      ]
+    },
+    "197": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "198": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "defined_out": [
+        "\"treasury_algo\""
+      ],
+      "stack_out": [
+        "\"treasury_algo\""
+      ]
+    },
+    "199": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"treasury_algo\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"treasury_algo\"",
+        "0"
+      ]
+    },
+    "200": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "201": {
+      "op": "pushbytes \"treasury_mint\"",
+      "defined_out": [
+        "\"treasury_mint\""
+      ],
+      "stack_out": [
+        "\"treasury_mint\""
+      ]
+    },
+    "216": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "\"treasury_mint\"",
+        "0"
+      ]
+    },
+    "217": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "218": {
+      "op": "pushbytes \"treasury_spot\"",
+      "defined_out": [
+        "\"treasury_spot\""
+      ],
+      "stack_out": [
+        "\"treasury_spot\""
+      ]
+    },
+    "233": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "\"treasury_spot\"",
+        "0"
+      ]
+    },
+    "234": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "235": {
+      "op": "bytec 6 // \"game_fee\"",
+      "defined_out": [
+        "\"game_fee\""
+      ],
+      "stack_out": [
+        "\"game_fee\""
+      ]
+    },
+    "237": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "\"game_fee\"",
+        "0"
+      ]
+    },
+    "238": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "239": {
+      "op": "pushbytes \"mint_token_id\"",
+      "defined_out": [
+        "\"mint_token_id\""
+      ],
+      "stack_out": [
+        "\"mint_token_id\""
+      ]
+    },
+    "254": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "\"mint_token_id\"",
+        "0"
+      ]
+    },
+    "255": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "256": {
+      "op": "pushbytes \"spot_token_id\"",
+      "defined_out": [
+        "\"spot_token_id\""
+      ],
+      "stack_out": [
+        "\"spot_token_id\""
+      ]
+    },
+    "271": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "\"spot_token_id\"",
+        "0"
+      ]
+    },
+    "272": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "273": {
+      "op": "pushbytes \"nft_template_id\"",
+      "defined_out": [
+        "\"nft_template_id\""
+      ],
+      "stack_out": [
+        "\"nft_template_id\""
+      ]
+    },
+    "290": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "\"nft_template_id\"",
+        "0"
+      ]
+    },
+    "291": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "292": {
+      "op": "intc_3 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "293": {
+      "op": "return",
+      "stack_out": []
+    },
+    "294": {
+      "subroutine": "smart_contracts.hello_world.contract.GameFiDApp.deposit_algo[routing]",
+      "params": {},
+      "block": "deposit_algo",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "297": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "298": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0"
+      ]
+    },
+    "299": {
+      "op": "intc_1 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "300": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "eq%0#0"
+      ]
+    },
+    "301": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "302": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "305": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ]
+    },
+    "306": {
+      "op": "len",
+      "defined_out": [
+        "len%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "len%1#0"
+      ]
+    },
+    "307": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "len%1#0",
+        "8"
+      ]
+    },
+    "308": {
+      "op": "==",
+      "defined_out": [
+        "eq%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "eq%1#0"
+      ]
+    },
+    "309": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "310": {
+      "op": "btoi",
+      "defined_out": [
+        "amount#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0"
+      ]
+    },
+    "311": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "313": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "sender#0 (copy)",
+        "0"
+      ]
+    },
+    "314": {
+      "op": "bytec_1 // \"player_algo\"",
+      "defined_out": [
+        "\"player_algo\"",
+        "0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "sender#0 (copy)",
+        "0",
+        "\"player_algo\""
+      ]
+    },
+    "315": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "316": {
+      "error": "check self.player_algo exists for account",
+      "op": "assert // check self.player_algo exists for account",
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "317": {
+      "op": "dig 1",
+      "defined_out": [
+        "amount#0",
+        "amount#0 (copy)",
+        "maybe_value%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "319": {
+      "op": "+",
+      "defined_out": [
+        "amount#0",
+        "sender#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "tmp%0#1"
+      ]
+    },
+    "320": {
+      "op": "uncover 2",
+      "stack_out": [
+        "amount#0",
+        "tmp%0#1",
+        "sender#0"
+      ]
+    },
+    "322": {
+      "op": "bytec_1 // \"player_algo\"",
+      "stack_out": [
+        "amount#0",
+        "tmp%0#1",
+        "sender#0",
+        "\"player_algo\""
+      ]
+    },
+    "323": {
+      "op": "uncover 2",
+      "stack_out": [
+        "amount#0",
+        "sender#0",
+        "\"player_algo\"",
+        "tmp%0#1"
+      ]
+    },
+    "325": {
+      "op": "app_local_put",
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "326": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "0"
+      ]
+    },
+    "327": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "defined_out": [
+        "\"treasury_algo\"",
+        "0",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "0",
+        "\"treasury_algo\""
+      ]
+    },
+    "328": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "329": {
+      "error": "check self.treasury_algo exists",
+      "op": "assert // check self.treasury_algo exists",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "330": {
+      "op": "+",
+      "defined_out": [
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "tmp%1#1"
+      ]
+    },
+    "331": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "stack_out": [
+        "tmp%1#1",
+        "\"treasury_algo\""
+      ]
+    },
+    "332": {
+      "op": "swap",
+      "stack_out": [
+        "\"treasury_algo\"",
+        "tmp%1#1"
+      ]
+    },
+    "333": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "334": {
+      "op": "intc_3 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "335": {
+      "op": "return",
+      "stack_out": []
+    },
+    "336": {
+      "subroutine": "smart_contracts.hello_world.contract.GameFiDApp.withdraw_algo[routing]",
+      "params": {},
+      "block": "withdraw_algo",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "339": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "340": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0"
+      ]
+    },
+    "341": {
+      "op": "intc_1 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "342": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "eq%0#0"
+      ]
+    },
+    "343": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "344": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "347": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ]
+    },
+    "348": {
+      "op": "len",
+      "defined_out": [
+        "len%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "len%1#0"
+      ]
+    },
+    "349": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "len%1#0",
+        "8"
+      ]
+    },
+    "350": {
+      "op": "==",
+      "defined_out": [
+        "eq%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "eq%1#0"
+      ]
+    },
+    "351": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "352": {
+      "op": "btoi",
+      "defined_out": [
+        "amount#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0"
+      ]
+    },
+    "353": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "355": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "sender#0 (copy)",
+        "0"
+      ]
+    },
+    "356": {
+      "op": "bytec_1 // \"player_algo\"",
+      "defined_out": [
+        "\"player_algo\"",
+        "0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "sender#0 (copy)",
+        "0",
+        "\"player_algo\""
+      ]
+    },
+    "357": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "358": {
+      "error": "check self.player_algo exists for account",
+      "op": "assert // check self.player_algo exists for account",
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "359": {
+      "op": "dup",
+      "defined_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "360": {
+      "op": "dig 2",
+      "defined_out": [
+        "amount#0",
+        "amount#0 (copy)",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "amount#0 (copy)"
+      ]
+    },
+    "362": {
+      "op": ">=",
+      "defined_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "sender#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0",
+        "tmp%0#1"
+      ]
+    },
+    "363": {
+      "error": "Insufficient balance",
+      "op": "assert // Insufficient balance",
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "364": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "366": {
+      "op": "-",
+      "defined_out": [
+        "amount#0",
+        "sender#0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "tmp%1#1"
+      ]
+    },
+    "367": {
+      "op": "uncover 2",
+      "stack_out": [
+        "amount#0",
+        "tmp%1#1",
+        "sender#0"
+      ]
+    },
+    "369": {
+      "op": "bytec_1 // \"player_algo\"",
+      "stack_out": [
+        "amount#0",
+        "tmp%1#1",
+        "sender#0",
+        "\"player_algo\""
+      ]
+    },
+    "370": {
+      "op": "uncover 2",
+      "stack_out": [
+        "amount#0",
+        "sender#0",
+        "\"player_algo\"",
+        "tmp%1#1"
+      ]
+    },
+    "372": {
+      "op": "app_local_put",
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "373": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "0"
+      ]
+    },
+    "374": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "defined_out": [
+        "\"treasury_algo\"",
+        "0",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "0",
+        "\"treasury_algo\""
+      ]
+    },
+    "375": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "376": {
+      "error": "check self.treasury_algo exists",
+      "op": "assert // check self.treasury_algo exists",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "377": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_value%2#0",
+        "amount#0"
+      ]
+    },
+    "378": {
+      "op": "-",
+      "defined_out": [
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "tmp%2#1"
+      ]
+    },
+    "379": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "stack_out": [
+        "tmp%2#1",
+        "\"treasury_algo\""
+      ]
+    },
+    "380": {
+      "op": "swap",
+      "stack_out": [
+        "\"treasury_algo\"",
+        "tmp%2#1"
+      ]
+    },
+    "381": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "382": {
+      "op": "intc_3 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "383": {
+      "op": "return",
+      "stack_out": []
+    },
+    "384": {
+      "subroutine": "smart_contracts.hello_world.contract.GameFiDApp.enter_game[routing]",
+      "params": {},
+      "block": "enter_game",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "387": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "388": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0"
+      ]
+    },
+    "389": {
+      "op": "intc_1 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "390": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "eq%0#0"
+      ]
+    },
+    "391": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "392": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "395": {
+      "op": "len",
+      "defined_out": [
+        "len%1#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%1#0"
+      ]
+    },
+    "396": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%1#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%1#0",
+        "8"
+      ]
+    },
+    "397": {
+      "op": "==",
+      "defined_out": [
+        "eq%1#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "eq%1#0"
+      ]
+    },
+    "398": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "399": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%4#0"
+      ]
+    },
+    "402": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)"
+      ]
+    },
+    "403": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "sender#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)",
+        "0"
+      ]
+    },
+    "404": {
+      "op": "extract_uint16",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%4#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "405": {
+      "op": "pushint 2 // 2",
+      "defined_out": [
+        "2",
+        "aggregate%array_length%0#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%4#0",
+        "aggregate%array_length%0#0",
+        "2"
+      ]
+    },
+    "407": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%4#0",
+        "add%0#0"
+      ]
+    },
+    "408": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender#0",
+        "tmp%4#0",
+        "add%0#0",
+        "tmp%4#0 (copy)"
+      ]
+    },
+    "410": {
+      "op": "len",
+      "defined_out": [
+        "add%0#0",
+        "len%2#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%4#0",
+        "add%0#0",
+        "len%2#0"
+      ]
+    },
+    "411": {
+      "op": "==",
+      "defined_out": [
+        "eq%2#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%4#0",
+        "eq%2#0"
+      ]
+    },
+    "412": {
+      "error": "invalid number of bytes for (len+uint8[])",
+      "op": "assert // invalid number of bytes for (len+uint8[])",
+      "stack_out": [
+        "sender#0",
+        "tmp%4#0"
+      ]
+    },
+    "413": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "fee_asset#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_asset#0"
+      ]
+    },
+    "416": {
+      "op": "txna ApplicationArgs 4",
+      "defined_out": [
+        "fee_asset#0",
+        "sender#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_asset#0",
+        "tmp%6#0"
+      ]
+    },
+    "419": {
+      "op": "dup",
+      "defined_out": [
+        "fee_asset#0",
+        "sender#0",
+        "tmp%6#0",
+        "tmp%6#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_asset#0",
+        "tmp%6#0",
+        "tmp%6#0 (copy)"
+      ]
+    },
+    "420": {
+      "op": "len",
+      "defined_out": [
+        "fee_asset#0",
+        "len%3#0",
+        "sender#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_asset#0",
+        "tmp%6#0",
+        "len%3#0"
+      ]
+    },
+    "421": {
+      "op": "intc_2 // 8",
+      "stack_out": [
+        "sender#0",
+        "fee_asset#0",
+        "tmp%6#0",
+        "len%3#0",
+        "8"
+      ]
+    },
+    "422": {
+      "op": "==",
+      "defined_out": [
+        "eq%3#0",
+        "fee_asset#0",
+        "sender#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_asset#0",
+        "tmp%6#0",
+        "eq%3#0"
+      ]
+    },
+    "423": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": [
+        "sender#0",
+        "fee_asset#0",
+        "tmp%6#0"
+      ]
+    },
+    "424": {
+      "op": "btoi",
+      "defined_out": [
+        "fee_amount#0",
+        "fee_asset#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_asset#0",
+        "fee_amount#0"
+      ]
+    },
+    "425": {
+      "op": "swap",
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "fee_asset#0"
+      ]
+    },
+    "426": {
+      "op": "bytec 5 // 0x414c474f",
+      "defined_out": [
+        "0x414c474f",
+        "fee_amount#0",
+        "fee_asset#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "fee_asset#0",
+        "0x414c474f"
+      ]
+    },
+    "428": {
+      "op": "==",
+      "defined_out": [
+        "fee_amount#0",
+        "sender#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "tmp%0#1"
+      ]
+    },
+    "429": {
+      "error": "Only ALGO supported in demo",
+      "op": "assert // Only ALGO supported in demo",
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0"
+      ]
+    },
+    "430": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "432": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "sender#0 (copy)",
+        "0"
+      ]
+    },
+    "433": {
+      "op": "bytec_1 // \"player_algo\"",
+      "defined_out": [
+        "\"player_algo\"",
+        "0",
+        "fee_amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "sender#0 (copy)",
+        "0",
+        "\"player_algo\""
+      ]
+    },
+    "434": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "fee_amount#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "435": {
+      "error": "check self.player_algo exists for account",
+      "op": "assert // check self.player_algo exists for account",
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "436": {
+      "op": "dup",
+      "defined_out": [
+        "fee_amount#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "437": {
+      "op": "dig 2",
+      "defined_out": [
+        "fee_amount#0",
+        "fee_amount#0 (copy)",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "fee_amount#0 (copy)"
+      ]
+    },
+    "439": {
+      "op": ">=",
+      "defined_out": [
+        "fee_amount#0",
+        "maybe_value%0#0",
+        "sender#0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "maybe_value%0#0",
+        "tmp%1#1"
+      ]
+    },
+    "440": {
+      "error": "Insufficient ALGO balance",
+      "op": "assert // Insufficient ALGO balance",
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "441": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "maybe_value%0#0",
+        "fee_amount#0 (copy)"
+      ]
+    },
+    "443": {
+      "op": "-",
+      "defined_out": [
+        "fee_amount#0",
+        "sender#0",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "fee_amount#0",
+        "tmp%2#1"
+      ]
+    },
+    "444": {
+      "op": "uncover 2",
+      "stack_out": [
+        "fee_amount#0",
+        "tmp%2#1",
+        "sender#0"
+      ]
+    },
+    "446": {
+      "op": "bytec_1 // \"player_algo\"",
+      "stack_out": [
+        "fee_amount#0",
+        "tmp%2#1",
+        "sender#0",
+        "\"player_algo\""
+      ]
+    },
+    "447": {
+      "op": "uncover 2",
+      "stack_out": [
+        "fee_amount#0",
+        "sender#0",
+        "\"player_algo\"",
+        "tmp%2#1"
+      ]
+    },
+    "449": {
+      "op": "app_local_put",
+      "stack_out": [
+        "fee_amount#0"
+      ]
+    },
+    "450": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "fee_amount#0",
+        "0"
+      ]
+    },
+    "451": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "defined_out": [
+        "\"treasury_algo\"",
+        "0",
+        "fee_amount#0"
+      ],
+      "stack_out": [
+        "fee_amount#0",
+        "0",
+        "\"treasury_algo\""
+      ]
+    },
+    "452": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "fee_amount#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "fee_amount#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "453": {
+      "error": "check self.treasury_algo exists",
+      "op": "assert // check self.treasury_algo exists",
+      "stack_out": [
+        "fee_amount#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "454": {
+      "op": "+",
+      "defined_out": [
+        "tmp%3#1"
+      ],
+      "stack_out": [
+        "tmp%3#1"
+      ]
+    },
+    "455": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "stack_out": [
+        "tmp%3#1",
+        "\"treasury_algo\""
+      ]
+    },
+    "456": {
+      "op": "swap",
+      "stack_out": [
+        "\"treasury_algo\"",
+        "tmp%3#1"
+      ]
+    },
+    "457": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "458": {
+      "op": "intc_3 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "459": {
+      "op": "return",
+      "stack_out": []
+    },
+    "460": {
+      "subroutine": "smart_contracts.hello_world.contract.GameFiDApp.resolve_game[routing]",
+      "params": {},
+      "block": "resolve_game",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "463": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0"
+      ],
+      "stack_out": [
+        "len%0#0"
+      ]
+    },
+    "464": {
+      "op": "intc_1 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0"
+      ],
+      "stack_out": [
+        "len%0#0",
+        "32"
+      ]
+    },
+    "465": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0"
+      ],
+      "stack_out": [
+        "eq%0#0"
+      ]
+    },
+    "466": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": []
+    },
+    "467": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "470": {
+      "op": "len",
+      "defined_out": [
+        "len%1#0"
+      ],
+      "stack_out": [
+        "len%1#0"
+      ]
+    },
+    "471": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%1#0"
+      ],
+      "stack_out": [
+        "len%1#0",
+        "8"
+      ]
+    },
+    "472": {
+      "op": "==",
+      "defined_out": [
+        "eq%1#0"
+      ],
+      "stack_out": [
+        "eq%1#0"
+      ]
+    },
+    "473": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": []
+    },
+    "474": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0"
+      ]
+    },
+    "477": {
+      "op": "dup",
+      "defined_out": [
+        "winner#0",
+        "winner#0 (copy)"
+      ],
+      "stack_out": [
+        "winner#0",
+        "winner#0 (copy)"
+      ]
+    },
+    "478": {
+      "op": "len",
+      "defined_out": [
+        "len%2#0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "len%2#0"
+      ]
+    },
+    "479": {
+      "op": "intc_1 // 32",
+      "stack_out": [
+        "winner#0",
+        "len%2#0",
+        "32"
+      ]
+    },
+    "480": {
+      "op": "==",
+      "defined_out": [
+        "eq%2#0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "eq%2#0"
+      ]
+    },
+    "481": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": [
+        "winner#0"
+      ]
+    },
+    "482": {
+      "op": "txna ApplicationArgs 4",
+      "defined_out": [
+        "tmp%6#0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "tmp%6#0"
+      ]
+    },
+    "485": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%6#0",
+        "tmp%6#0 (copy)",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "tmp%6#0",
+        "tmp%6#0 (copy)"
+      ]
+    },
+    "486": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%6#0",
+        "tmp%6#0 (copy)",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "tmp%6#0",
+        "tmp%6#0 (copy)",
+        "0"
+      ]
+    },
+    "487": {
+      "op": "extract_uint16",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "tmp%6#0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "tmp%6#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "488": {
+      "op": "pushint 2 // 2",
+      "defined_out": [
+        "2",
+        "aggregate%array_length%0#0",
+        "tmp%6#0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "tmp%6#0",
+        "aggregate%array_length%0#0",
+        "2"
+      ]
+    },
+    "490": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "tmp%6#0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "tmp%6#0",
+        "add%0#0"
+      ]
+    },
+    "491": {
+      "op": "swap",
+      "stack_out": [
+        "winner#0",
+        "add%0#0",
+        "tmp%6#0"
+      ]
+    },
+    "492": {
+      "op": "len",
+      "defined_out": [
+        "add%0#0",
+        "len%3#0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "add%0#0",
+        "len%3#0"
+      ]
+    },
+    "493": {
+      "op": "==",
+      "defined_out": [
+        "eq%3#0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "eq%3#0"
+      ]
+    },
+    "494": {
+      "error": "invalid number of bytes for (len+uint8[])",
+      "op": "assert // invalid number of bytes for (len+uint8[])",
+      "stack_out": [
+        "winner#0"
+      ]
+    },
+    "495": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "winner#0",
+        "0"
+      ]
+    },
+    "496": {
+      "op": "bytec 6 // \"game_fee\"",
+      "defined_out": [
+        "\"game_fee\"",
+        "0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "0",
+        "\"game_fee\""
+      ]
+    },
+    "498": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "fee#0",
+        "maybe_exists%0#0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "fee#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "499": {
+      "error": "check self.game_fee exists",
+      "op": "assert // check self.game_fee exists",
+      "stack_out": [
+        "winner#0",
+        "fee#0"
+      ]
+    },
+    "500": {
+      "op": "dup",
+      "defined_out": [
+        "fee#0",
+        "fee#0 (copy)",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "fee#0",
+        "fee#0 (copy)"
+      ]
+    },
+    "501": {
+      "op": "pushint 9 // 9",
+      "defined_out": [
+        "9",
+        "fee#0",
+        "fee#0 (copy)",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "fee#0",
+        "fee#0 (copy)",
+        "9"
+      ]
+    },
+    "503": {
+      "op": "*",
+      "defined_out": [
+        "fee#0",
+        "tmp%0#1",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "fee#0",
+        "tmp%0#1"
+      ]
+    },
+    "504": {
+      "op": "pushint 10 // 10",
+      "defined_out": [
+        "10",
+        "fee#0",
+        "tmp%0#1",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "fee#0",
+        "tmp%0#1",
+        "10"
+      ]
+    },
+    "506": {
+      "op": "/",
+      "defined_out": [
+        "fee#0",
+        "winner#0",
+        "winner_payout#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "fee#0",
+        "winner_payout#0"
+      ]
+    },
+    "507": {
+      "op": "swap",
+      "stack_out": [
+        "winner#0",
+        "winner_payout#0",
+        "fee#0"
+      ]
+    },
+    "508": {
+      "op": "dig 1",
+      "defined_out": [
+        "fee#0",
+        "winner#0",
+        "winner_payout#0",
+        "winner_payout#0 (copy)"
+      ],
+      "stack_out": [
+        "winner#0",
+        "winner_payout#0",
+        "fee#0",
+        "winner_payout#0 (copy)"
+      ]
+    },
+    "510": {
+      "op": "-",
+      "defined_out": [
+        "treasury_cut#0",
+        "winner#0",
+        "winner_payout#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "winner_payout#0",
+        "treasury_cut#0"
+      ]
+    },
+    "511": {
+      "op": "dig 2",
+      "stack_out": [
+        "winner#0",
+        "winner_payout#0",
+        "treasury_cut#0",
+        "winner#0 (copy)"
+      ]
+    },
+    "513": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "winner#0",
+        "winner_payout#0",
+        "treasury_cut#0",
+        "winner#0 (copy)",
+        "0"
+      ]
+    },
+    "514": {
+      "op": "bytec_1 // \"player_algo\"",
+      "defined_out": [
+        "\"player_algo\"",
+        "0",
+        "treasury_cut#0",
+        "winner#0",
+        "winner#0 (copy)",
+        "winner_payout#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "winner_payout#0",
+        "treasury_cut#0",
+        "winner#0 (copy)",
+        "0",
+        "\"player_algo\""
+      ]
+    },
+    "515": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "treasury_cut#0",
+        "winner#0",
+        "winner_payout#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "winner_payout#0",
+        "treasury_cut#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "516": {
+      "error": "check self.player_algo exists for account",
+      "op": "assert // check self.player_algo exists for account",
+      "stack_out": [
+        "winner#0",
+        "winner_payout#0",
+        "treasury_cut#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "517": {
+      "op": "uncover 2",
+      "stack_out": [
+        "winner#0",
+        "treasury_cut#0",
+        "maybe_value%1#0",
+        "winner_payout#0"
+      ]
+    },
+    "519": {
+      "op": "+",
+      "defined_out": [
+        "tmp%3#1",
+        "treasury_cut#0",
+        "winner#0"
+      ],
+      "stack_out": [
+        "winner#0",
+        "treasury_cut#0",
+        "tmp%3#1"
+      ]
+    },
+    "520": {
+      "op": "uncover 2",
+      "stack_out": [
+        "treasury_cut#0",
+        "tmp%3#1",
+        "winner#0"
+      ]
+    },
+    "522": {
+      "op": "bytec_1 // \"player_algo\"",
+      "stack_out": [
+        "treasury_cut#0",
+        "tmp%3#1",
+        "winner#0",
+        "\"player_algo\""
+      ]
+    },
+    "523": {
+      "op": "uncover 2",
+      "stack_out": [
+        "treasury_cut#0",
+        "winner#0",
+        "\"player_algo\"",
+        "tmp%3#1"
+      ]
+    },
+    "525": {
+      "op": "app_local_put",
+      "stack_out": [
+        "treasury_cut#0"
+      ]
+    },
+    "526": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "treasury_cut#0",
+        "0"
+      ]
+    },
+    "527": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "defined_out": [
+        "\"treasury_algo\"",
+        "0",
+        "treasury_cut#0"
+      ],
+      "stack_out": [
+        "treasury_cut#0",
+        "0",
+        "\"treasury_algo\""
+      ]
+    },
+    "528": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "treasury_cut#0"
+      ],
+      "stack_out": [
+        "treasury_cut#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "529": {
+      "error": "check self.treasury_algo exists",
+      "op": "assert // check self.treasury_algo exists",
+      "stack_out": [
+        "treasury_cut#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "530": {
+      "op": "+",
+      "defined_out": [
+        "tmp%4#1"
+      ],
+      "stack_out": [
+        "tmp%4#1"
+      ]
+    },
+    "531": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "stack_out": [
+        "tmp%4#1",
+        "\"treasury_algo\""
+      ]
+    },
+    "532": {
+      "op": "swap",
+      "stack_out": [
+        "\"treasury_algo\"",
+        "tmp%4#1"
+      ]
+    },
+    "533": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "534": {
+      "op": "intc_3 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "535": {
+      "op": "return",
+      "stack_out": []
+    },
+    "536": {
+      "subroutine": "smart_contracts.hello_world.contract.GameFiDApp.swap_tokens[routing]",
+      "params": {},
+      "block": "swap_tokens",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1"
+    },
+    "539": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "sender#0"
+      ]
+    },
+    "540": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0"
+      ]
+    },
+    "541": {
+      "op": "intc_1 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "542": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "eq%0#0"
+      ]
+    },
+    "543": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "544": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "547": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ]
+    },
+    "548": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)",
+        "0"
+      ]
+    },
+    "549": {
+      "op": "extract_uint16",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "550": {
+      "op": "pushint 2 // 2",
+      "defined_out": [
+        "2",
+        "aggregate%array_length%0#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "aggregate%array_length%0#0",
+        "2"
+      ]
+    },
+    "552": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "add%0#0"
+      ]
+    },
+    "553": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "add%0#0",
+        "tmp%2#0 (copy)"
+      ]
+    },
+    "555": {
+      "op": "len",
+      "defined_out": [
+        "add%0#0",
+        "len%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "add%0#0",
+        "len%1#0"
+      ]
+    },
+    "556": {
+      "op": "==",
+      "defined_out": [
+        "eq%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "eq%1#0"
+      ]
+    },
+    "557": {
+      "error": "invalid number of bytes for (len+uint8[])",
+      "op": "assert // invalid number of bytes for (len+uint8[])",
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "558": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0"
+      ]
+    },
+    "561": {
+      "op": "dup",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0"
+      ]
+    },
+    "562": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "tmp%4#0"
+      ]
+    },
+    "565": {
+      "op": "dup",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)"
+      ]
+    },
+    "566": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)",
+        "0"
+      ]
+    },
+    "567": {
+      "op": "extract_uint16",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "tmp%4#0",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "568": {
+      "op": "pushint 2 // 2",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "tmp%4#0",
+        "aggregate%array_length%1#0",
+        "2"
+      ]
+    },
+    "570": {
+      "op": "+",
+      "defined_out": [
+        "add%1#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "tmp%4#0",
+        "add%1#0"
+      ]
+    },
+    "571": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "tmp%4#0",
+        "add%1#0",
+        "tmp%4#0 (copy)"
+      ]
+    },
+    "573": {
+      "op": "len",
+      "defined_out": [
+        "add%1#0",
+        "from_asset#0",
+        "len%2#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "tmp%4#0",
+        "add%1#0",
+        "len%2#0"
+      ]
+    },
+    "574": {
+      "op": "==",
+      "defined_out": [
+        "eq%2#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "tmp%4#0",
+        "eq%2#0"
+      ]
+    },
+    "575": {
+      "error": "invalid number of bytes for (len+uint8[])",
+      "op": "assert // invalid number of bytes for (len+uint8[])",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "tmp%4#0"
+      ]
+    },
+    "576": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "from_asset#0",
+        "to_asset#0"
+      ]
+    },
+    "579": {
+      "op": "swap",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "from_asset#0"
+      ]
+    },
+    "580": {
+      "op": "txna ApplicationArgs 4",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0",
+        "tmp%6#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "from_asset#0",
+        "tmp%6#0"
+      ]
+    },
+    "583": {
+      "op": "dup",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0",
+        "tmp%6#0",
+        "tmp%6#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "from_asset#0",
+        "tmp%6#0",
+        "tmp%6#0 (copy)"
+      ]
+    },
+    "584": {
+      "op": "len",
+      "defined_out": [
+        "from_asset#0",
+        "len%3#0",
+        "sender#0",
+        "tmp%6#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "from_asset#0",
+        "tmp%6#0",
+        "len%3#0"
+      ]
+    },
+    "585": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "from_asset#0",
+        "len%3#0",
+        "sender#0",
+        "tmp%6#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "from_asset#0",
+        "tmp%6#0",
+        "len%3#0",
+        "8"
+      ]
+    },
+    "586": {
+      "op": "==",
+      "defined_out": [
+        "eq%3#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%6#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "from_asset#0",
+        "tmp%6#0",
+        "eq%3#0"
+      ]
+    },
+    "587": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "from_asset#0",
+        "tmp%6#0"
+      ]
+    },
+    "588": {
+      "op": "btoi",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "from_asset#0",
+        "amount#0"
+      ]
+    },
+    "589": {
+      "op": "dup",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "from_asset#0",
+        "amount#0",
+        "amount#0"
+      ]
+    },
+    "590": {
+      "op": "cover 2",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "amount#0"
+      ]
+    },
+    "592": {
+      "op": "txna ApplicationArgs 5",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%8#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "amount#0",
+        "tmp%8#0"
+      ]
+    },
+    "595": {
+      "op": "dup",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%8#0",
+        "tmp%8#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "amount#0",
+        "tmp%8#0",
+        "tmp%8#0 (copy)"
+      ]
+    },
+    "596": {
+      "op": "len",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "len%4#0",
+        "sender#0",
+        "tmp%8#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "amount#0",
+        "tmp%8#0",
+        "len%4#0"
+      ]
+    },
+    "597": {
+      "op": "intc_2 // 8",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "amount#0",
+        "tmp%8#0",
+        "len%4#0",
+        "8"
+      ]
+    },
+    "598": {
+      "op": "==",
+      "defined_out": [
+        "amount#0",
+        "eq%4#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%8#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "amount#0",
+        "tmp%8#0",
+        "eq%4#0"
+      ]
+    },
+    "599": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "amount#0",
+        "tmp%8#0"
+      ]
+    },
+    "600": {
+      "op": "btoi",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "min_out#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "amount#0",
+        "min_out#0"
+      ]
+    },
+    "601": {
+      "op": ">=",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%1#1",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "tmp%1#1"
+      ]
+    },
+    "602": {
+      "error": "Slippage too high",
+      "op": "assert // Slippage too high",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0"
+      ]
+    },
+    "603": {
+      "op": "bytec 5 // 0x414c474f",
+      "defined_out": [
+        "0x414c474f",
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "0x414c474f"
+      ]
+    },
+    "605": {
+      "op": "==",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%2#1",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "tmp%2#1"
+      ]
+    },
+    "606": {
+      "op": "bz swap_tokens_after_if_else@3",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "609": {
+      "op": "dig 3",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0"
+      ]
+    },
+    "611": {
+      "op": "dup",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "612": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0"
+      ]
+    },
+    "613": {
+      "op": "bytec_1 // \"player_algo\"",
+      "defined_out": [
+        "\"player_algo\"",
+        "0",
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0",
+        "\"player_algo\""
+      ]
+    },
+    "614": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "615": {
+      "error": "check self.player_algo exists for account",
+      "op": "assert // check self.player_algo exists for account",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "616": {
+      "op": "dig 2",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%0#0",
+        "amount#0"
+      ]
+    },
+    "618": {
+      "op": "-",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%3#1",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "tmp%3#1"
+      ]
+    },
+    "619": {
+      "op": "bytec_1 // \"player_algo\""
+    },
+    "620": {
+      "op": "swap",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "\"player_algo\"",
+        "tmp%3#1"
+      ]
+    },
+    "621": {
+      "op": "app_local_put",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "622": {
+      "block": "swap_tokens_after_if_else@3",
+      "stack_in": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ],
+      "op": "dig 2",
+      "defined_out": [
+        "from_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0"
+      ]
+    },
+    "624": {
+      "op": "bytec 7 // 0x4d494e54",
+      "defined_out": [
+        "0x4d494e54",
+        "from_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "0x4d494e54"
+      ]
+    },
+    "626": {
+      "op": "==",
+      "defined_out": [
+        "from_asset#0",
+        "tmp%4#1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "tmp%4#1"
+      ]
+    },
+    "627": {
+      "op": "bz swap_tokens_after_if_else@5",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "630": {
+      "op": "dig 3",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0"
+      ]
+    },
+    "632": {
+      "op": "dup",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "633": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "from_asset#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0"
+      ]
+    },
+    "634": {
+      "op": "bytec_3 // \"player_mint\"",
+      "defined_out": [
+        "\"player_mint\"",
+        "0",
+        "from_asset#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0",
+        "\"player_mint\""
+      ]
+    },
+    "635": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "from_asset#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "636": {
+      "error": "check self.player_mint exists for account",
+      "op": "assert // check self.player_mint exists for account",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "637": {
+      "op": "dig 2",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "maybe_value%1#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%1#0",
+        "amount#0"
+      ]
+    },
+    "639": {
+      "op": "-",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%5#1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "tmp%5#1"
+      ]
+    },
+    "640": {
+      "op": "bytec_3 // \"player_mint\""
+    },
+    "641": {
+      "op": "swap",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "\"player_mint\"",
+        "tmp%5#1"
+      ]
+    },
+    "642": {
+      "op": "app_local_put",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "643": {
+      "block": "swap_tokens_after_if_else@5",
+      "stack_in": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ],
+      "op": "dig 2",
+      "defined_out": [
+        "from_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0"
+      ]
+    },
+    "645": {
+      "op": "bytec 8 // 0x53504f54",
+      "defined_out": [
+        "0x53504f54",
+        "from_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "from_asset#0",
+        "0x53504f54"
+      ]
+    },
+    "647": {
+      "op": "==",
+      "defined_out": [
+        "from_asset#0",
+        "tmp%6#1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "tmp%6#1"
+      ]
+    },
+    "648": {
+      "op": "bz swap_tokens_after_if_else@7",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "651": {
+      "op": "dig 3",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0"
+      ]
+    },
+    "653": {
+      "op": "dup",
+      "defined_out": [
+        "from_asset#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "654": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "from_asset#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0"
+      ]
+    },
+    "655": {
+      "op": "bytec 4 // \"player_spot\"",
+      "defined_out": [
+        "\"player_spot\"",
+        "0",
+        "from_asset#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0",
+        "\"player_spot\""
+      ]
+    },
+    "657": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "from_asset#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "658": {
+      "error": "check self.player_spot exists for account",
+      "op": "assert // check self.player_spot exists for account",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "659": {
+      "op": "dig 2",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "maybe_value%2#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%2#0",
+        "amount#0"
+      ]
+    },
+    "661": {
+      "op": "-",
+      "defined_out": [
+        "amount#0",
+        "from_asset#0",
+        "sender#0",
+        "tmp%7#1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "tmp%7#1"
+      ]
+    },
+    "662": {
+      "op": "bytec 4 // \"player_spot\""
+    },
+    "664": {
+      "op": "swap",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "\"player_spot\"",
+        "tmp%7#1"
+      ]
+    },
+    "665": {
+      "op": "app_local_put",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "666": {
+      "block": "swap_tokens_after_if_else@7",
+      "stack_in": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ],
+      "op": "dig 1",
+      "defined_out": [
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "to_asset#0"
+      ]
+    },
+    "668": {
+      "op": "bytec 5 // 0x414c474f",
+      "defined_out": [
+        "0x414c474f",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "to_asset#0",
+        "0x414c474f"
+      ]
+    },
+    "670": {
+      "op": "==",
+      "defined_out": [
+        "tmp%8#1",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "tmp%8#1"
+      ]
+    },
+    "671": {
+      "op": "bz swap_tokens_after_if_else@9",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "674": {
+      "op": "dig 3",
+      "defined_out": [
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0"
+      ]
+    },
+    "676": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "677": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0"
+      ]
+    },
+    "678": {
+      "op": "bytec_1 // \"player_algo\"",
+      "defined_out": [
+        "\"player_algo\"",
+        "0",
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0",
+        "\"player_algo\""
+      ]
+    },
+    "679": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%3#0",
+        "maybe_value%3#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "680": {
+      "error": "check self.player_algo exists for account",
+      "op": "assert // check self.player_algo exists for account",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "681": {
+      "op": "dig 2",
+      "defined_out": [
+        "amount#0",
+        "maybe_value%3#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%3#0",
+        "amount#0"
+      ]
+    },
+    "683": {
+      "op": "+",
+      "defined_out": [
+        "amount#0",
+        "sender#0",
+        "tmp%9#1",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "tmp%9#1"
+      ]
+    },
+    "684": {
+      "op": "bytec_1 // \"player_algo\""
+    },
+    "685": {
+      "op": "swap",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "\"player_algo\"",
+        "tmp%9#1"
+      ]
+    },
+    "686": {
+      "op": "app_local_put",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "687": {
+      "block": "swap_tokens_after_if_else@9",
+      "stack_in": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ],
+      "op": "dig 1",
+      "defined_out": [
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "to_asset#0"
+      ]
+    },
+    "689": {
+      "op": "bytec 7 // 0x4d494e54",
+      "defined_out": [
+        "0x4d494e54",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "to_asset#0",
+        "0x4d494e54"
+      ]
+    },
+    "691": {
+      "op": "==",
+      "defined_out": [
+        "tmp%10#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "tmp%10#0"
+      ]
+    },
+    "692": {
+      "op": "bz swap_tokens_after_if_else@11",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "695": {
+      "op": "dig 3",
+      "defined_out": [
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0"
+      ]
+    },
+    "697": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "698": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0"
+      ]
+    },
+    "699": {
+      "op": "bytec_3 // \"player_mint\"",
+      "defined_out": [
+        "\"player_mint\"",
+        "0",
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0",
+        "\"player_mint\""
+      ]
+    },
+    "700": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%4#0",
+        "maybe_value%4#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%4#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "701": {
+      "error": "check self.player_mint exists for account",
+      "op": "assert // check self.player_mint exists for account",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%4#0"
+      ]
+    },
+    "702": {
+      "op": "dig 2",
+      "defined_out": [
+        "amount#0",
+        "maybe_value%4#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%4#0",
+        "amount#0"
+      ]
+    },
+    "704": {
+      "op": "+",
+      "defined_out": [
+        "amount#0",
+        "sender#0",
+        "tmp%11#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "tmp%11#0"
+      ]
+    },
+    "705": {
+      "op": "bytec_3 // \"player_mint\""
+    },
+    "706": {
+      "op": "swap",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "\"player_mint\"",
+        "tmp%11#0"
+      ]
+    },
+    "707": {
+      "op": "app_local_put",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "708": {
+      "block": "swap_tokens_after_if_else@11",
+      "stack_in": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ],
+      "op": "dig 1",
+      "defined_out": [
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "to_asset#0"
+      ]
+    },
+    "710": {
+      "op": "bytec 8 // 0x53504f54",
+      "defined_out": [
+        "0x53504f54",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "to_asset#0",
+        "0x53504f54"
+      ]
+    },
+    "712": {
+      "op": "==",
+      "defined_out": [
+        "tmp%12#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "tmp%12#0"
+      ]
+    },
+    "713": {
+      "op": "bz swap_tokens_after_if_else@13",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "716": {
+      "op": "dig 3",
+      "defined_out": [
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0"
+      ]
+    },
+    "718": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "719": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0"
+      ]
+    },
+    "720": {
+      "op": "bytec 4 // \"player_spot\"",
+      "defined_out": [
+        "\"player_spot\"",
+        "0",
+        "sender#0",
+        "sender#0 (copy)",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "sender#0 (copy)",
+        "0",
+        "\"player_spot\""
+      ]
+    },
+    "722": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%5#0",
+        "maybe_value%5#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%5#0",
+        "maybe_exists%5#0"
+      ]
+    },
+    "723": {
+      "error": "check self.player_spot exists for account",
+      "op": "assert // check self.player_spot exists for account",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%5#0"
+      ]
+    },
+    "724": {
+      "op": "dig 2",
+      "defined_out": [
+        "amount#0",
+        "maybe_value%5#0",
+        "sender#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "maybe_value%5#0",
+        "amount#0"
+      ]
+    },
+    "726": {
+      "op": "+",
+      "defined_out": [
+        "amount#0",
+        "sender#0",
+        "tmp%13#0",
+        "to_asset#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "tmp%13#0"
+      ]
+    },
+    "727": {
+      "op": "bytec 4 // \"player_spot\""
+    },
+    "729": {
+      "op": "swap",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "sender#0",
+        "\"player_spot\"",
+        "tmp%13#0"
+      ]
+    },
+    "730": {
+      "op": "app_local_put",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "731": {
+      "block": "swap_tokens_after_if_else@13",
+      "stack_in": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ],
+      "op": "intc_3 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0",
+        "1"
+      ]
+    },
+    "732": {
+      "op": "return",
+      "stack_out": [
+        "sender#0",
+        "from_asset#0",
+        "to_asset#0",
+        "amount#0"
+      ]
+    },
+    "733": {
+      "subroutine": "smart_contracts.hello_world.contract.GameFiDApp.release_escrow[routing]",
+      "params": {},
+      "block": "release_escrow",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "736": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "737": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0"
+      ]
+    },
+    "738": {
+      "op": "intc_1 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "739": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "eq%0#0"
+      ]
+    },
+    "740": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "741": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "744": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ]
+    },
+    "745": {
+      "op": "len",
+      "defined_out": [
+        "len%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "len%1#0"
+      ]
+    },
+    "746": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "len%1#0",
+        "8"
+      ]
+    },
+    "747": {
+      "op": "==",
+      "defined_out": [
+        "eq%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "eq%1#0"
+      ]
+    },
+    "748": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "749": {
+      "op": "btoi",
+      "defined_out": [
+        "amount#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0"
+      ]
+    },
+    "750": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "amount#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "0"
+      ]
+    },
+    "751": {
+      "op": "bytec_2 // \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "0",
+        "amount#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "0",
+        "\"admin\""
+      ]
+    },
+    "752": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "753": {
+      "error": "check self.admin exists",
+      "op": "assert // check self.admin exists",
+      "stack_out": [
+        "sender#0",
+        "amount#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "754": {
+      "op": "uncover 2",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "sender#0"
+      ]
+    },
+    "756": {
+      "op": "==",
+      "defined_out": [
+        "amount#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "amount#0",
+        "tmp%0#1"
+      ]
+    },
+    "757": {
+      "error": "Not admin",
+      "op": "assert // Not admin",
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "758": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "0"
+      ]
+    },
+    "759": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "defined_out": [
+        "\"treasury_algo\"",
+        "0",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "0",
+        "\"treasury_algo\""
+      ]
+    },
+    "760": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "761": {
+      "error": "check self.treasury_algo exists",
+      "op": "assert // check self.treasury_algo exists",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "762": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_value%1#0",
+        "amount#0"
+      ]
+    },
+    "763": {
+      "op": "-",
+      "defined_out": [
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "tmp%1#1"
+      ]
+    },
+    "764": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "stack_out": [
+        "tmp%1#1",
+        "\"treasury_algo\""
+      ]
+    },
+    "765": {
+      "op": "swap",
+      "stack_out": [
+        "\"treasury_algo\"",
+        "tmp%1#1"
+      ]
+    },
+    "766": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "767": {
+      "op": "intc_3 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "768": {
+      "op": "return",
+      "stack_out": []
+    },
+    "769": {
+      "subroutine": "smart_contracts.hello_world.contract.GameFiDApp.update_oracle[routing]",
+      "params": {},
+      "block": "update_oracle",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "772": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "773": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0"
+      ]
+    },
+    "774": {
+      "op": "intc_1 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "775": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "eq%0#0"
+      ]
+    },
+    "776": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "777": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "780": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ]
+    },
+    "781": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)",
+        "0"
+      ]
+    },
+    "782": {
+      "op": "extract_uint16",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "783": {
+      "op": "pushint 2 // 2",
+      "defined_out": [
+        "2",
+        "aggregate%array_length%0#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "aggregate%array_length%0#0",
+        "2"
+      ]
+    },
+    "785": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "add%0#0"
+      ]
+    },
+    "786": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "add%0#0",
+        "tmp%2#0 (copy)"
+      ]
+    },
+    "788": {
+      "op": "len",
+      "defined_out": [
+        "add%0#0",
+        "len%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "add%0#0",
+        "len%1#0"
+      ]
+    },
+    "789": {
+      "op": "==",
+      "defined_out": [
+        "eq%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "eq%1#0"
+      ]
+    },
+    "790": {
+      "error": "invalid number of bytes for (len+uint8[])",
+      "op": "assert // invalid number of bytes for (len+uint8[])",
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "791": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "sender#0",
+        "symbol#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "symbol#0"
+      ]
+    },
+    "794": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0"
+      ]
+    },
+    "797": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)"
+      ]
+    },
+    "798": {
+      "op": "len",
+      "defined_out": [
+        "len%2#0",
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0",
+        "len%2#0"
+      ]
+    },
+    "799": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%2#0",
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0",
+        "len%2#0",
+        "8"
+      ]
+    },
+    "800": {
+      "op": "==",
+      "defined_out": [
+        "eq%2#0",
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0",
+        "eq%2#0"
+      ]
+    },
+    "801": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "tmp%4#0"
+      ]
+    },
+    "802": {
+      "op": "btoi",
+      "defined_out": [
+        "price#0",
+        "sender#0",
+        "symbol#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "price#0"
+      ]
+    },
+    "803": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "price#0",
+        "0"
+      ]
+    },
+    "804": {
+      "op": "bytec_2 // \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "0",
+        "price#0",
+        "sender#0",
+        "symbol#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "price#0",
+        "0",
+        "\"admin\""
+      ]
+    },
+    "805": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "price#0",
+        "sender#0",
+        "symbol#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "price#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "806": {
+      "error": "check self.admin exists",
+      "op": "assert // check self.admin exists",
+      "stack_out": [
+        "sender#0",
+        "symbol#0",
+        "price#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "807": {
+      "op": "uncover 3",
+      "stack_out": [
+        "symbol#0",
+        "price#0",
+        "maybe_value%0#0",
+        "sender#0"
+      ]
+    },
+    "809": {
+      "op": "==",
+      "defined_out": [
+        "price#0",
+        "symbol#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "symbol#0",
+        "price#0",
+        "tmp%0#1"
+      ]
+    },
+    "810": {
+      "error": "Not admin",
+      "op": "assert // Not admin",
+      "stack_out": [
+        "symbol#0",
+        "price#0"
+      ]
+    },
+    "811": {
+      "op": "pushbytes 0x6f7261636c655f707269636573",
+      "defined_out": [
+        "0x6f7261636c655f707269636573",
+        "price#0",
+        "symbol#0"
+      ],
+      "stack_out": [
+        "symbol#0",
+        "price#0",
+        "0x6f7261636c655f707269636573"
+      ]
+    },
+    "826": {
+      "op": "uncover 2",
+      "stack_out": [
+        "price#0",
+        "0x6f7261636c655f707269636573",
+        "symbol#0"
+      ]
+    },
+    "828": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "price#0"
+      ],
+      "stack_out": [
+        "price#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "829": {
+      "op": "swap",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "price#0"
+      ]
+    },
+    "830": {
+      "op": "itob",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "encoded_value%0#0"
+      ]
+    },
+    "831": {
+      "op": "box_put",
+      "stack_out": []
+    },
+    "832": {
+      "op": "intc_3 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "833": {
+      "op": "return",
+      "stack_out": []
+    },
+    "834": {
+      "subroutine": "smart_contracts.hello_world.contract.GameFiDApp.update_game_result[routing]",
+      "params": {},
+      "block": "update_game_result",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "837": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "sender#0 (copy)"
+      ]
+    },
+    "838": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0"
+      ]
+    },
+    "839": {
+      "op": "intc_1 // 32",
+      "defined_out": [
+        "32",
+        "len%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "840": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "eq%0#0"
+      ]
+    },
+    "841": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": [
+        "sender#0"
+      ]
+    },
+    "842": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "845": {
+      "op": "dup",
+      "defined_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ]
+    },
+    "846": {
+      "op": "len",
+      "defined_out": [
+        "len%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "len%1#0"
+      ]
+    },
+    "847": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "len%1#0",
+        "8"
+      ]
+    },
+    "848": {
+      "op": "==",
+      "defined_out": [
+        "eq%1#0",
+        "sender#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0",
+        "eq%1#0"
+      ]
+    },
+    "849": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": [
+        "sender#0",
+        "tmp%2#0"
+      ]
+    },
+    "850": {
+      "op": "btoi",
+      "defined_out": [
+        "game_id#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0"
+      ]
+    },
+    "851": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "game_id#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "tmp%4#0"
+      ]
+    },
+    "854": {
+      "op": "dup",
+      "defined_out": [
+        "game_id#0",
+        "sender#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)"
+      ]
+    },
+    "855": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "game_id#0",
+        "sender#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "tmp%4#0",
+        "tmp%4#0 (copy)",
+        "0"
+      ]
+    },
+    "856": {
+      "op": "extract_uint16",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "game_id#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "tmp%4#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "857": {
+      "op": "pushint 2 // 2",
+      "defined_out": [
+        "2",
+        "aggregate%array_length%0#0",
+        "game_id#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "tmp%4#0",
+        "aggregate%array_length%0#0",
+        "2"
+      ]
+    },
+    "859": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "game_id#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "tmp%4#0",
+        "add%0#0"
+      ]
+    },
+    "860": {
+      "op": "dig 1",
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "tmp%4#0",
+        "add%0#0",
+        "tmp%4#0 (copy)"
+      ]
+    },
+    "862": {
+      "op": "len",
+      "defined_out": [
+        "add%0#0",
+        "game_id#0",
+        "len%2#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "tmp%4#0",
+        "add%0#0",
+        "len%2#0"
+      ]
+    },
+    "863": {
+      "op": "==",
+      "defined_out": [
+        "eq%2#0",
+        "game_id#0",
+        "sender#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "tmp%4#0",
+        "eq%2#0"
+      ]
+    },
+    "864": {
+      "error": "invalid number of bytes for (len+uint8[])",
+      "op": "assert // invalid number of bytes for (len+uint8[])",
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "tmp%4#0"
+      ]
+    },
+    "865": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "game_id#0",
+        "result#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "result#0"
+      ]
+    },
+    "868": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "result#0",
+        "0"
+      ]
+    },
+    "869": {
+      "op": "bytec_2 // \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "0",
+        "game_id#0",
+        "result#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "result#0",
+        "0",
+        "\"admin\""
+      ]
+    },
+    "870": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "game_id#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "result#0",
+        "sender#0"
+      ],
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "result#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "871": {
+      "error": "check self.admin exists",
+      "op": "assert // check self.admin exists",
+      "stack_out": [
+        "sender#0",
+        "game_id#0",
+        "result#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "872": {
+      "op": "uncover 3",
+      "stack_out": [
+        "game_id#0",
+        "result#0",
+        "maybe_value%0#0",
+        "sender#0"
+      ]
+    },
+    "874": {
+      "op": "==",
+      "defined_out": [
+        "game_id#0",
+        "result#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "game_id#0",
+        "result#0",
+        "tmp%0#1"
+      ]
+    },
+    "875": {
+      "error": "Not admin",
+      "op": "assert // Not admin",
+      "stack_out": [
+        "game_id#0",
+        "result#0"
+      ]
+    },
+    "876": {
+      "op": "swap",
+      "stack_out": [
+        "result#0",
+        "game_id#0"
+      ]
+    },
+    "877": {
+      "op": "itob",
+      "defined_out": [
+        "encoded_value%0#0",
+        "result#0"
+      ],
+      "stack_out": [
+        "result#0",
+        "encoded_value%0#0"
+      ]
+    },
+    "878": {
+      "op": "pushbytes 0x6f7261636c655f726573756c7473",
+      "defined_out": [
+        "0x6f7261636c655f726573756c7473",
+        "encoded_value%0#0",
+        "result#0"
+      ],
+      "stack_out": [
+        "result#0",
+        "encoded_value%0#0",
+        "0x6f7261636c655f726573756c7473"
+      ]
+    },
+    "894": {
+      "op": "swap",
+      "stack_out": [
+        "result#0",
+        "0x6f7261636c655f726573756c7473",
+        "encoded_value%0#0"
+      ]
+    },
+    "895": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "result#0"
+      ],
+      "stack_out": [
+        "result#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "896": {
+      "op": "dup",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0 (copy)",
+        "result#0"
+      ],
+      "stack_out": [
+        "result#0",
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0 (copy)"
+      ]
+    },
+    "897": {
+      "op": "box_del",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "result#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "result#0",
+        "box_prefixed_key%0#0",
+        "{box_del}"
+      ]
+    },
+    "898": {
+      "op": "pop",
+      "stack_out": [
+        "result#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "899": {
+      "op": "swap",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "result#0"
+      ]
+    },
+    "900": {
+      "op": "box_put",
+      "stack_out": []
+    },
+    "901": {
+      "op": "intc_3 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "902": {
+      "op": "return",
+      "stack_out": []
+    },
+    "903": {
+      "subroutine": "smart_contracts.hello_world.contract.GameFiDApp.validate_security[routing]",
+      "params": {},
+      "block": "validate_security",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "904": {
+      "op": "bytec_0 // \"treasury_algo\"",
+      "defined_out": [
+        "\"treasury_algo\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"treasury_algo\""
+      ]
+    },
+    "905": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "906": {
+      "op": "bury 1",
+      "stack_out": [
+        "maybe_exists%0#0"
+      ]
+    },
+    "908": {
+      "error": "check self.treasury_algo exists",
+      "op": "return // on error: check self.treasury_algo exists",
+      "defined_out": [],
+      "stack_out": []
+    }
+  }
+}
