@@ -1,254 +1,186 @@
-from algopy import ARC4Contract, arc4, subroutine, GlobalState, LocalState, UInt64, Bytes, Account, BoxMap
+from algopy import (
+    Account,
+    ARC4Contract,
+    arc4,
+    BoxMap,
+    Bytes,
+    GlobalState,
+    itxn,
+    Txn,
+    UInt64,
+)
+from algopy.op import itob
 
-# --- ARC4 Contract Definition ---
-class GameFiDApp(ARC4Contract):
-    oracle_prices: BoxMap[Bytes, UInt64]
-    oracle_game_results: BoxMap[UInt64, Bytes]
+class GamesHub(ARC4Contract):
     """
-    GameFi DApp: Multi-game, multi-token, staking, swap, and reward system.
+    GamesHub: Entry fee, reward payout, leaderboard, coin collection game, and in-game store using box storage.
     """
-    def __init__(self) -> None:
-        # --- Global State ---
+
+    def _init_(self) -> None:  # <-- Corrected constructor name
         self.admin = GlobalState(Account)
         self.treasury_algo = GlobalState(UInt64)
-        self.treasury_mint = GlobalState(UInt64)
-        self.treasury_spot = GlobalState(UInt64)
-        self.game_fee = GlobalState(UInt64)
-        self.mint_token_id = GlobalState(UInt64)
-        self.spot_token_id = GlobalState(UInt64)
-        self.nft_template_id = GlobalState(UInt64)
+        self.entry_fee = GlobalState(UInt64)
+        self.reward_amount = GlobalState(UInt64)
+        self.low_entry_fee = GlobalState(UInt64)
+        self.item_price_mint = GlobalState(UInt64)
+        self.player_algo_box = BoxMap(Bytes, UInt64, key_prefix=b"player_algo_")
+        self.player_score_box = BoxMap(Bytes, UInt64, key_prefix=b"player_score_")
+        self.player_mint_box = BoxMap(Bytes, UInt64, key_prefix=b"player_mint_")
+        self.player_items_box = BoxMap(Bytes, UInt64, key_prefix=b"player_item_")
 
-        # --- Player Storage ---
-        self.player_algo = LocalState(UInt64)
-        self.player_mint = LocalState(UInt64)
-        self.player_spot = LocalState(UInt64)
-        self.player_stake_mint = LocalState(UInt64)
-        self.player_stake_spot = LocalState(UInt64)
-        # in-memory maps (not on-chain persistent in this minimal demo)
-        # Use plain Python dicts for off-chain/demo-only data. If on-chain
-        # persistence is required, replace these with BoxMap or GlobalState
-        # backed structures.
-        self.oracle_prices = BoxMap(Bytes, UInt64, key_prefix=b"oracle_prices")
-        self.oracle_game_results = BoxMap(UInt64, Bytes, key_prefix=b"oracle_results")
-
-    # --- Events ---
     @arc4.abimethod
-    def create(self, sender: Account) -> None:
-        """Initialize contract with creator as admin."""
-        self.admin.value = sender
-        # initialize numeric globals to safe defaults
+    def create(
+        self,
+        entry_fee: UInt64,
+        reward_amount: UInt64,
+        low_entry_fee: UInt64,
+        item_price_mint: UInt64,
+    ) -> None:
+        self.admin.value = Txn.sender
         self.treasury_algo.value = UInt64(0)
-        self.treasury_mint.value = UInt64(0)
-        self.treasury_spot.value = UInt64(0)
-        self.game_fee.value = UInt64(0)
-        self.mint_token_id.value = UInt64(0)
-        self.spot_token_id.value = UInt64(0)
-        self.nft_template_id.value = UInt64(0)
-    # ...existing code...
+        self.entry_fee.value = entry_fee
+        self.reward_amount.value = reward_amount
+        self.low_entry_fee.value = low_entry_fee
+        self.item_price_mint.value = item_price_mint
 
-    # --- Deposit/Withdraw ---
+    @arc4.abimethod
+    def add_mint_tokens(self, player: Account, amount: UInt64) -> UInt64:
+        """
+        Add MINT tokens to a player's balance.
+        Only admin can add tokens.
+        Client must pass box_reference = b"player_mint_" + player.bytes
+        Returns the player's new MINT balance.
+        """
+        assert Txn.sender == self.admin.value, "Only admin can add MINT tokens"
+
+        key = player.bytes
+        current_balance = self.player_mint_box.get(key, default=UInt64(0))
+        new_balance = current_balance + amount
+        self.player_mint_box[key] = new_balance
+
+        return new_balance
+
+    @arc4.abimethod
+    def set_item_price(self, price: UInt64) -> None:
+        assert Txn.sender == self.admin.value, "Only admin can set price"
+        self.item_price_mint.value = price
+
+    @arc4.abimethod
+    def buy_item_with_mint(self, player: Account, item_id: UInt64) -> UInt64:
+        """
+        Player buys an item using MINT tokens.
+        Client must pass box_reference = b"player_mint_" + player.bytes
+        and box_reference = b"player_item_" + player.bytes + itob(item_id).
+        Returns the player's new MINT balance.
+        """
+        key = player.bytes
+        price = self.item_price_mint.value
+        mint_balance = self.player_mint_box.get(key, default=UInt64(0))
+        assert mint_balance >= price, "Insufficient MINT tokens"
+        self.player_mint_box[key] = mint_balance - price
+        item_key = key + itob(item_id)
+        self.player_items_box[item_key] = UInt64(1)
+        return self.player_mint_box[key]
+
+    @arc4.abimethod
+    def has_item(self, player: Account, item_id: UInt64) -> UInt64:
+        """
+        Check if the player owns the item.
+        Client must pass box_reference = b"player_item_" + player.bytes + itob(item_id).
+        """
+        item_key = player.bytes + itob(item_id)
+        return self.player_items_box.get(item_key, default=UInt64(0))
+
+    @arc4.abimethod
+    def set_low_entry_fee(self, fee: UInt64) -> None:
+        assert Txn.sender == self.admin.value, "Only admin can set fee"
+        self.low_entry_fee.value = fee
+
     @arc4.abimethod
     def deposit_algo(self, sender: Account, amount: UInt64) -> None:
-        """Deposit ALGO to player balance."""
-        self.player_algo[sender] = self.player_algo[sender] + amount
+        key = sender.bytes
+        current = self.player_algo_box.get(key, default=UInt64(0))
+        self.player_algo_box[key] = current + amount
         self.treasury_algo.value = self.treasury_algo.value + amount
 
     @arc4.abimethod
-    def withdraw_algo(self, sender: Account, amount: UInt64) -> None:
-        """Withdraw ALGO from player balance."""
-        assert self.player_algo[sender] >= amount, "Insufficient balance"
-        self.player_algo[sender] = self.player_algo[sender] - amount
+    def enter_game(self, player: Account) -> None:
+        key = player.bytes
+        current = self.player_algo_box.get(key, default=UInt64(0))
+        fee = self.entry_fee.value
+        assert current >= fee, "Insufficient ALGO for entry fee"
+        self.player_algo_box[key] = current - fee
+        self.treasury_algo.value = self.treasury_algo.value + fee
+
+    @arc4.abimethod
+    def start_coin_collection_game(self, player: Account) -> None:
+        key = player.bytes
+        current = self.player_algo_box.get(key, default=UInt64(0))
+        fee = self.low_entry_fee.value
+        assert current >= fee, "Insufficient ALGO for entry fee"
+        self.player_algo_box[key] = current - fee
+        self.treasury_algo.value = self.treasury_algo.value + fee
+
+    @arc4.abimethod
+    def end_coin_collection_game(
+        self, player: Account, coins_collected: UInt64
+    ) -> None:
+        key = player.bytes
+        units = coins_collected // UInt64(10000)
+        mint_award = units * UInt64(5)
+        if mint_award > UInt64(0):
+            mint_current = self.player_mint_box.get(key, default=UInt64(0))
+            self.player_mint_box[key] = mint_current + mint_award
+
+    @arc4.abimethod
+    def win_game(self, player: Account) -> None:
+        key = player.bytes
+        current = self.player_algo_box.get(key, default=UInt64(0))
+        score = self.player_score_box.get(key, default=UInt64(0))
+        reward = self.reward_amount.value
+        assert self.treasury_algo.value >= reward, "Treasury insufficient"
+        self.player_algo_box[key] = current + reward
+        self.treasury_algo.value = self.treasury_algo.value - reward
+        self.player_score_box[key] = score + UInt64(1)
+        mint_current = self.player_mint_box.get(key, default=UInt64(0))
+        mint_new = mint_current + UInt64(5)
+        self.player_mint_box[key] = mint_new
+        thousand = UInt64(1000)
+        algo_per_thousand = UInt64(1)
+        if mint_new >= thousand:
+            num_thousands = mint_new // thousand
+            mint_remaining = mint_new % thousand
+            algo_credit = num_thousands * algo_per_thousand
+            self.player_mint_box[key] = mint_remaining
+            algo_balance = self.player_algo_box.get(key, default=UInt64(0))
+            self.player_algo_box[key] = algo_balance + algo_credit
+            self.treasury_algo.value = self.treasury_algo.value - algo_credit
+
+    @arc4.abimethod
+    def withdraw_algo(self, player: Account, amount: UInt64) -> None:
+        """
+        Withdraw ALGO for a player.
+        Requires box_reference = b"player_algo_" + player.bytes.
+        """
+        key = player.bytes
+        current = self.player_algo_box.get(key, default=UInt64(0))
+        assert current >= amount, "Insufficient balance"
+        assert self.treasury_algo.value >= amount, "Treasury insufficient"
+        self.player_algo_box[key] = current - amount
         self.treasury_algo.value = self.treasury_algo.value - amount
-
-    # --- Game Entry & Escrow ---
-    @arc4.abimethod
-    def enter_game(self, sender: Account, game_id: UInt64, fee_asset: Bytes, fee_amount: UInt64) -> None:
-        """Player enters a game, fee escrowed."""
-        # Example: Only ALGO supported for demo
-        assert fee_asset == Bytes(b"ALGO"), "Only ALGO supported in demo"
-        assert self.player_algo[sender] >= fee_amount, "Insufficient ALGO balance"
-        self.player_algo[sender] = self.player_algo[sender] - fee_amount
-        self.treasury_algo.value = self.treasury_algo.value + fee_amount
-
-    # --- Game Logic & Rewards ---
-    @arc4.abimethod
-    def resolve_game(self, sender: Account, game_id: UInt64, winner: Account, result: Bytes) -> None:
-        """Resolve game, distribute rewards."""
-        # Example: 90% to winner, 10% to treasury
-        fee = self.game_fee.value
-        winner_payout = fee * UInt64(9) // UInt64(10)
-        treasury_cut = fee - winner_payout
-        self.player_algo[winner] = self.player_algo[winner] + winner_payout
-        self.treasury_algo.value = self.treasury_algo.value + treasury_cut
-            # ...existing code...
-
-            # --- Events ---
-            # ...existing code...
-
-        # ...existing code...
-        # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-
-            # --- NFT Minting (Stub) ---
-        # ...existing code...
-        # ...existing code...
-    # ...existing code...
-                # In production, use ARC-19/ARC-3 mint logic
-    # ...existing code...
-
-            # --- Tinyman Swap Integration (Simulated) ---
-        # ...existing code...
-        # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-
-            # --- Treasury & Escrow Management ---
-        # ...existing code...
-        # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-
-            # --- Oracle Integration ---
-        # ...existing code...
-            # ...existing code...
-            # ...existing code...
-            # ...existing code...
-
-    # ...existing code...
-    # ...existing code...
-            # ...existing code...
-            # ...existing code...
-            # ...existing code...
-
-        # --- Security Checks ---
-    # ...existing code...
-    # ...existing code...
-            # ...existing code...
-            # Example: Check for negative balances, unauthorized swaps, etc.
-            # ...existing code...
-            # ...existing code...
-            # ...existing code...
-            # Add more checks as needed
-
-        # --- Helper Functions ---
-    # ...existing code...
-    # ...existing code...
-            # ...existing code...
-            # Example: 1 Spot per 1 ALGO payout
-            # ...existing code...
-
-    # ...existing code...
-    # ...existing code...
-        # ...existing code...
-            # Example: 1:1 swap for testnet
-        # ...existing code...
-    # ...existing code...
-    # ...existing code...
-        # Simulate by incrementing a counter
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-
-    # --- Tinyman Swap Integration (Simulated) ---
-    # ...existing code...
-    # ...existing code...
-    # ...existing code...
-        # ...existing code...
-    # ...existing code...
-        # ...existing code...
-    @arc4.abimethod
-    def swap_tokens(self, sender: Account, from_asset: Bytes, to_asset: Bytes, amount: UInt64, min_out: UInt64) -> None:
-        """Swap tokens (simulated) using AlgoPy types."""
-        out_amount = self.simulate_swap(from_asset, to_asset, amount)
-        assert out_amount >= min_out, "Slippage too high"
-        # Debit from_asset
-        if from_asset == Bytes(b"ALGO"):
-            self.player_algo[sender] = self.player_algo[sender] - amount
-        if from_asset == Bytes(b"MINT"):
-            self.player_mint[sender] = self.player_mint[sender] - amount
-        if from_asset == Bytes(b"SPOT"):
-            self.player_spot[sender] = self.player_spot[sender] - amount
-        # Credit to_asset
-        if to_asset == Bytes(b"ALGO"):
-            self.player_algo[sender] = self.player_algo[sender] + out_amount
-        if to_asset == Bytes(b"MINT"):
-            self.player_mint[sender] = self.player_mint[sender] + out_amount
-        if to_asset == Bytes(b"SPOT"):
-            self.player_spot[sender] = self.player_spot[sender] + out_amount
-        
-
-    # --- Treasury & Escrow Management ---
-    @arc4.abimethod
-    def release_escrow(self, sender: Account, amount: UInt64) -> None:
-        """Admin-only release of escrowed ALGO to a receiver (simplified)."""
-        assert self.admin.value == sender, "Not admin"
-        # Reduce treasury by amount
-        self.treasury_algo.value = self.treasury_algo.value - amount
-        
-
-    # --- Oracle Integration ---
-    @arc4.abimethod
-    def update_oracle(self, sender: Account, symbol: Bytes, price: UInt64) -> None:
-        """Update asset price from oracle (admin only)."""
-        assert self.admin.value == sender, "Not admin"
-        self.oracle_prices[symbol] = price
+        itxn.Payment(receiver=player, amount=amount).submit()
 
     @arc4.abimethod
-    def update_game_result(self, sender: Account, game_id: UInt64, result: Bytes) -> None:
-        """Update game result from backend/oracle."""
-        assert self.admin.value == sender, "Not admin"
-        self.oracle_game_results[game_id] = result
+    def get_score(self, player: Account) -> UInt64:
+        key = player.bytes
+        return self.player_score_box.get(key, default=UInt64(0))
 
-    # --- Security Checks ---
     @arc4.abimethod
-    def validate_security(self) -> None:
-        """Run basic security checks (ensures no underflow in sample balances)."""
-        # Since we use UInt64, underflow would wrap; check treasury reasonable
-        assert self.treasury_algo.value >= UInt64(0), "Negative treasury"
-        
+    def get_balance(self, player: Account) -> UInt64:
+        key = player.bytes
+        return self.player_algo_box.get(key, default=UInt64(0))
 
-    # --- Helper Functions ---
-    @subroutine
-    def simulate_spot_reward(self, payout: UInt64) -> UInt64:
-        """Simulate spot token reward based on payout."""
-        return payout
-
-    @subroutine
-    def simulate_swap(self, from_asset: Bytes, to_asset: Bytes, amount: UInt64) -> UInt64:
-        """Simulate swap using oracle price or fixed rate (1:1 demo)."""
-        return amount
-
-# End of contract
+    @arc4.abimethod
+    def get_mint_balance(self, player: Account) -> UInt64:
+        key = player.bytes
+        return self.player_mint_box.get(key, default=UInt64(0))
